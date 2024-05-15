@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "86200a1a-6d5a-4299-9ade-36a4fc184f00",
+		"name": "ExamenJava2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23914202"
+	},
+	"item": [
+		{
+			"name": "PostPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"luca@heg.ch\",\r\n    \"firstname\":\"luca\",\r\n    \"lastname\":\"furlan\",\r\n    \"address\":\"geneve\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/exam/alimentation/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"exam",
+						"alimentation",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountForPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"lucaheg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/exam/alimentation/person/account/luca@heg.ch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"exam",
+						"alimentation",
+						"person",
+						"account",
+						"luca@heg.ch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOnePerson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/exam/restitution/person/luca@heg.ch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"exam",
+						"restitution",
+						"person",
+						"luca@heg.ch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTaskForAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"test\",\r\n    \"description\":\"test\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/exam/alimentation/person/account/lucaheg/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"exam",
+						"alimentation",
+						"person",
+						"account",
+						"lucaheg",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LockAccount",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/exam/alimentation/person/account/lock/lucaheg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"exam",
+						"alimentation",
+						"person",
+						"account",
+						"lock",
+						"lucaheg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPerson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/exam/restitution/person/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"exam",
+						"restitution",
+						"person",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAccountByStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/exam/restitution/person/account/ACTIVE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"exam",
+						"restitution",
+						"person",
+						"account",
+						"ACTIVE"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
